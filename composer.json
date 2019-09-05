@@ -1,0 +1,20 @@
+{
+    "name": "jhalarde/larapress",
+    "description": "Larapress",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Harvey",
+            "email": "jhalarde@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jhalarde\\Larapress\\LarapressServiceProvider"
+            ]
+        }
+    }
+}
