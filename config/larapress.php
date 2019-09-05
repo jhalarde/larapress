@@ -15,7 +15,7 @@ return [
 
 	/*
 	 * The post uri where we get the article post
-	 * eg. http://website.com/json/file/123
+	 * eg. http://website.com/json/file/
 	 */
 	'get_post_uri' => null,
 

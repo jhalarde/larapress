@@ -5,4 +5,6 @@
     <meta http-equiv="X-UA-Compatible"
           content="ie=edge">
     <title>{{ config('larapress.page_title', 'Larapress') }}</title>
+
+    @include('larapress::layouts.styles')
 </head>
