@@ -8,4 +8,6 @@ return [
 	'get_post_uri' => null,
 
 	'response_identifier' => null,
+
+	'cache' => false,
 ];

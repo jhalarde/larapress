@@ -6,6 +6,9 @@ use Illuminate\Support\ServiceProvider;
 
 class LarapressServiceProvider extends ServiceProvider
 {
+	/**
+	 * @var string
+	 */
 	public $configPath = __DIR__.'/../config/larapress.php';
     /**
      * Register services.
