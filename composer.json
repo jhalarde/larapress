@@ -16,5 +16,10 @@
                 "Jhalarde\\Larapress\\LarapressServiceProvider"
             ]
         }
+    },
+    "autoload": {
+        "psr-4": {
+            "Jhalarde\\Larapress\\": "src/"
+        }
     }
 }
