@@ -31,22 +31,19 @@ class LarapressController extends Controller
 	 */
 	public function __construct()
 	{
-		$this->postUri = config('larapress.get_post_uri');
-		$this->responseIdentifier = config('larapress.response_identifier');
 		$this->isCacheEnabled = config('larapress.cache');
-
-		if (!$this->postUri || !$this->responseIdentifier) {
-			throw new \Exception("Config Incomplete.");
-		}
 	}
 
 	/**
 	 * @param $id
 	 *
 	 * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+	 * @throws \Exception
 	 */
 	public function getPost($id)
 	{
+		$this->checkConfig();
+
 		if (Cache::has($id)) {
 			$response = Cache::get($id);
 
@@ -88,4 +85,17 @@ class LarapressController extends Controller
 
 		return Arr::get($arr, $this->responseIdentifier);
     }
+
+	/**
+	 * @throws \Exception
+	 */
+	private function checkConfig()
+	{
+		$this->postUri = config('larapress.get_post_uri');
+		$this->responseIdentifier = config('larapress.response_identifier');
+
+		if (!$this->postUri || !$this->responseIdentifier) {
+			throw new \Exception("Config Incomplete.");
+		}
+	}
 }
