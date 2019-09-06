@@ -45,7 +45,7 @@ class Larapress
 		if (Cache::has($id)) {
 			$response = Cache::get($id);
 
-			return $this->gotoView($response, $id);
+			return $response;
 		}
 
 		$response = $this->getJson($id);
