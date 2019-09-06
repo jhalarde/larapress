@@ -14,7 +14,10 @@
         "laravel": {
             "providers": [
                 "Jhalarde\\Larapress\\LarapressServiceProvider"
-            ]
+            ],
+            "aliases": {
+                "Larapress": "Jhalarde\\Larapress\\Facade"
+            }
         }
     },
     "autoload": {

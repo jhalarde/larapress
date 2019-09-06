@@ -20,6 +20,9 @@ class LarapressServiceProvider extends ServiceProvider
 	    $this->mergeConfigFrom(
 		    realpath($this->configPath), 'larapress'
 	    );
+	    $this->app->bind('larapress', function () {
+	    	return new Larapress;
+	    });
     }
 
     /**
