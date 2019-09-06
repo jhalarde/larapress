@@ -38,7 +38,7 @@ class Larapress
 	 * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
 	 * @throws \Exception
 	 */
-	public function getPost($id)
+	public function render($id)
 	{
 		$this->checkConfig();
 
