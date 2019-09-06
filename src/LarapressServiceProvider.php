@@ -36,7 +36,9 @@ class LarapressServiceProvider extends ServiceProvider
 		    realpath($this->configPath) => config_path('larapress.php'),
 	    ], 'larapress-config');
 
-	    $this->loadRoutesFrom(__DIR__.'/routes.php');
+	    if (config('larapress.enable_routing')) {
+		    $this->loadRoutesFrom(__DIR__.'/routes.php');
+	    }
 
 	    $this->loadViewsFrom(__DIR__.'/../resources/views', 'larapress');
 

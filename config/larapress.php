@@ -34,4 +34,9 @@ return [
 	 * Flag if the cache should be enabled.
 	 */
 	'cache' => false,
+
+	/*
+	 * Enables dynamic get post routing
+	 */
+	'enable_routing' => false,
 ];
