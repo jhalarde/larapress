@@ -9,7 +9,9 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "jhalarde/larapress": "dev-master"
+    },
     "extra": {
         "laravel": {
             "providers": [
@@ -23,6 +25,9 @@
     "autoload": {
         "psr-4": {
             "Jhalarde\\Larapress\\": "src/"
-        }
+        },
+        "files" : [
+            "src/helpers.php"
+        ]
     }
 }
